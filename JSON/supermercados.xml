@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<supermercados>
+    <element>
+        <coordenadas>
+        <element>39.000202</element>
+        <element>-1.8574663</element>
+        </coordenadas>
+        <direccion>C/Unacalle nº1</direccion>
+        <habituales>
+        <element>P-002</element>
+        <element>P-003</element>
+        </habituales>
+        <id>S-001</id>
+        <nombre>Mercadona</nombre>
+        <ofertas>
+        <element>
+            <descuento>0.2</descuento>
+            <id>O-001</id>
+            <periodo-vigencia>15/4/2021 8:00 p.m.</periodo-vigencia>
+            <producto_id>P-001</producto_id>
+        </element>
+        </ofertas>
+        <productos>
+        <element>
+            <Nutri-Score>A</Nutri-Score>
+            <adquirido>true</adquirido>
+            <barcode>8414869231321</barcode>
+            <descripcion>Tomate en rama de Murcia (190 gr aprox)</descripcion>
+            <id>P-001</id>
+            <moneda>€</moneda>
+            <nombre>Tomate Rama</nombre>
+            <precioVta>0.38</precioVta>
+            <unidad_medida>kg</unidad_medida>
+            <unidades>1</unidades>
+        </element>
+        <element>
+            <Nutri-Score>C</Nutri-Score>
+            <adquirido>false</adquirido>
+            <barcode>8410199380418</barcode>
+            <descripcion>Lay's, Al Punto de Sal - 300 g</descripcion>
+            <id>P-002</id>
+            <moneda>€</moneda>
+            <nombre>Patatas, Al Punto de Sal</nombre>
+            <precioVta>2.39</precioVta>
+            <unidad>g</unidad>
+            <unidades>1</unidades>
+        </element>
+        <element>
+            <Nutri-Score>D</Nutri-Score>
+            <adquirido>true</adquirido>
+            <barcode>8480000664631</barcode>
+            <descripcion>Cerveza Lager Clásica - Steinburg - 33 cl</descripcion>
+            <id>P-003</id>
+            <moneda>€</moneda>
+            <nombre>Cerveza Steinburg</nombre>
+            <precioVta>3.27</precioVta>
+            <unidad>cl</unidad>
+            <unidades>6</unidades>
+        </element>
+        </productos>
+    </element>
+    <element>
+        <coordenadas>
+        <element>39.00101</element>
+        <element>-1.8558228</element>
+        </coordenadas>
+        <direccion>C/Otracalle nº1</direccion>
+        <habituales>
+        <element>P-004</element>
+        <element>P-006</element>
+        </habituales>
+        <id>S-002</id>
+        <nombre>Consum</nombre>
+        <ofertas>
+        <element>
+            <descuento>0.15</descuento>
+            <id>O-002</id>
+            <periodo-vigencia>30/4/2021 8:00 p.m.</periodo-vigencia>
+            <producto_id>P-006</producto_id>
+        </element>
+        <element>
+            <descuento>0.05</descuento>
+            <id>O-003</id>
+            <periodo-vigencia>30/4/2021 8:00 p.m.</periodo-vigencia>
+            <producto_id>P-005</producto_id>
+        </element>
+        </ofertas>
+        <productos>
+        <element>
+            <Nutri-Score>A</Nutri-Score>
+            <adquirido>false</adquirido>
+            <barcode>8410830001016</barcode>
+            <descripcion>arroz bomba SOS - 1kg</descripcion>
+            <id>P-004</id>
+            <moneda>€</moneda>
+            <nombre>Arroz SOS</nombre>
+            <precioVta>1.52</precioVta>
+            <unidad>kg</unidad>
+            <unidades>1</unidades>
+        </element>
+        <element>
+            <Nutri-Score>B</Nutri-Score>
+            <adquirido>true</adquirido>
+            <barcode>8410128750145</barcode>
+            <descripcion>LECHE SIN LACTOSA - Pascual - 1 l</descripcion>
+            <id>P-005</id>
+            <moneda>€</moneda>
+            <nombre>Leche Pascual sin lactosa</nombre>
+            <precioVta>1.09</precioVta>
+            <unidad>l</unidad>
+            <unidades>1</unidades>
+        </element>
+        <element>
+            <Nutri-Score>A</Nutri-Score>
+            <adquirido>true</adquirido>
+            <barcode>8413681021820</barcode>
+            <descripcion>Cerveza Reserva 1925 Botella Cristal Pack-6 x 0,33cl</descripcion>
+            <id>P-006</id>
+            <moneda>€</moneda>
+            <nombre>cerveza alhambra 1925</nombre>
+            <precioVta>6.74</precioVta>
+            <unidad>cl</unidad>
+            <unidades>6</unidades>
+        </element>
+        </productos>
+    </element>
+</supermercados>

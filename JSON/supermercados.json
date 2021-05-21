@@ -1,0 +1,110 @@
+{
+    "supermercados": [{
+            "id": "S-001",
+            "nombre": "Mercadona",
+            "direccion": "C/Unacalle nº1",
+            "coordenadas": [39.00020088279292, -1.8574663243935998],
+            "productos": [{
+                    "id": "P-001",
+                    "nombre": "Tomate Rama",
+                    "descripcion": "Tomate en rama de Murcia (190 gr aprox)",
+                    "barcode": "8414869231321",
+                    "Nutri-Score": "A",
+                    "unidades": 1,
+                    "unidad_medida": "kg",
+                    "precioVta": 0.38,
+                    "moneda": "€",
+                    "adquirido": true
+                },
+                {
+                    "id": "P-002",
+                    "nombre": "Patatas, Al Punto de Sal",
+                    "descripcion": "Lay's, Al Punto de Sal - 300 g",
+                    "barcode": "8410199380418",
+                    "Nutri-Score": "C",
+                    "unidades": 1,
+                    "unidad": "g",
+                    "precioVta": 2.39,
+                    "moneda": "€",
+                    "adquirido": false
+                },
+                {
+                    "id": "P-003",
+                    "nombre": "Cerveza Steinburg",
+                    "descripcion": "Cerveza Lager Clásica - Steinburg - 33 cl",
+                    "barcode": "8480000664631",
+                    "Nutri-Score": "D",
+                    "unidades": 6,
+                    "unidad": "cl",
+                    "precioVta": 3.27,
+                    "moneda": "€",
+                    "adquirido": true
+                }
+            ],
+            "ofertas": [{
+                "id": "O-001",
+                "producto_id": "P-001",
+                "descuento": 0.20,
+                "periodo-vigencia": "15/4/2021 8:00 p.m."
+            }],
+            "habituales": ["P-002", "P-003"]
+        },
+        {
+            "id": "S-002",
+            "nombre": "Consum",
+            "direccion": "C/Otracalle nº1",
+            "coordenadas": [39.00101025133508, -1.8558228105392374],
+            "productos": [{
+                    "id": "P-004",
+                    "nombre": "Arroz SOS",
+                    "descripcion": "arroz bomba SOS - 1kg",
+                    "barcode": "8410830001016",
+                    "Nutri-Score": "A",
+                    "unidades": 1,
+                    "unidad": "kg",
+                    "precioVta": 1.52,
+                    "moneda": "€",
+                    "adquirido": false
+                },
+                {
+                    "id": "P-005",
+                    "nombre": "Leche Pascual sin lactosa",
+                    "descripcion": "LECHE SIN LACTOSA - Pascual - 1 l",
+                    "barcode": "8410128750145",
+                    "Nutri-Score": "B",
+                    "unidades": 1,
+                    "unidad": "l",
+                    "precioVta": 1.09,
+                    "moneda": "€",
+                    "adquirido": true
+                },
+                {
+                    "id": "P-006",
+                    "nombre": "cerveza alhambra 1925",
+                    "descripcion": "Cerveza Reserva 1925 Botella Cristal Pack-6 x 0,33cl",
+                    "barcode": "8413681021820",
+                    "Nutri-Score": "A",
+                    "unidades": 6,
+                    "unidad": "cl",
+                    "precioVta": 6.74,
+                    "moneda": "€",
+                    "adquirido": true
+                }
+            ],
+            "ofertas": [{
+                    "id": "O-002",
+                    "producto_id": "P-006",
+                    "descuento": 0.15,
+                    "periodo-vigencia": "30/4/2021 8:00 p.m."
+                },
+                {
+                    "id": "O-003",
+                    "producto_id": "P-005",
+                    "descuento": 0.05,
+                    "periodo-vigencia": "30/4/2021 8:00 p.m."
+                }
+            ],
+            "habituales": ["P-004", "P-006"]
+        }
+    ]
+}

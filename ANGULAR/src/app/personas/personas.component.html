@@ -1,0 +1,138 @@
+<div class="container">
+  <mat-toolbar>
+    <span class="fill-remaining-space"></span>
+    <h1><mat-icon> contact_mail</mat-icon> AGENDA</h1>
+    <span class="fill-remaining-space"></span>
+  </mat-toolbar>
+
+  <form class="form" #formtemp="ngForm" (submit)=" add( formtemp ) ">
+    <mat-grid-list cols="2" rowHeight="400px">
+      <mat-grid-tile>
+        <div class="columnas">
+          <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" minlength="3" placeholder="Nombre" [ngModelOptions]="{standalone: true}"
+              [(ngModel)]="contacto.nombre">
+          </mat-form-field>
+          <div *ngIf='errorNombre.length' style='color:red'>{{errorNombre}}</div>
+          <mat-form-field>
+            <mat-label>Apellidos</mat-label>
+            <input matInput type="text" minlength="3" placeholder="Apellido/s" [ngModelOptions]="{standalone: true}"
+              [(ngModel)]="contacto.apellidos">
+          </mat-form-field>
+          <div *ngIf='errorApellidos.length' style='color:red'>{{errorApellidos}}</div>
+
+          <mat-form-field>
+            <mat-label>DNI</mat-label>
+            <input matInput type="text" placeholder="NIF (8 números y 1 letra)" pattern="0-9]{8}[A-Za-z]{1}"
+              [ngModelOptions]="{standalone: true}" [(ngModel)]="contacto.dni">
+          </mat-form-field>
+          <div *ngIf='errorDNI.length' style='color:red'>{{errorDNI}}</div>
+          <mat-radio-group aria-label="Select an option" [ngModelOptions]="{standalone: true}"
+          [(ngModel)]="contacto.sexo">
+          <mat-radio-button value="Hombre">Hombre</mat-radio-button>
+          <mat-radio-button value="Mujer">Mujer</mat-radio-button>
+          <mat-radio-button value="Otro">Otro</mat-radio-button>
+          <mat-radio-button value="No Especificado">No Especificado</mat-radio-button>
+        </mat-radio-group>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="columnas">
+          <mat-form-field>
+            <mat-label>Edad</mat-label>
+            <input matInput type="number" placeholder="Edad" [ngModelOptions]="{standalone: true}"
+              [(ngModel)]="contacto.edad">
+          </mat-form-field>
+          <div *ngIf='errorEdad.length' style='color:red'>{{errorEdad}}</div>
+
+        <mat-form-field>
+          <mat-label>Cumpleaños</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Fecha Cumpleaños" [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="contacto.cumple">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <mat-label>Color Favorito</mat-label>
+          <input matInput type="color" minlength="3" placeholder="Color" [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="contacto.colorFavorito" class="colorpicker">
+        </mat-form-field>
+        <p class="manita"><i class="fa fa-hand-o-left" aria-hidden="true"></i> Escoge el color que más te guste </p>
+        <div *ngIf='errorColor.length' style='color:red'>{{errorColor}}</div>
+        </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <div class="columnas">
+      <mat-form-field>
+        <mat-label>Notas</mat-label>
+        <textarea matInput placeholder="Comentario" [ngModelOptions]="{standalone: true}"
+          [(ngModel)]="contacto.notas"></textarea>
+      </mat-form-field>
+    </div>
+    </mat-grid-tile>
+
+      <mat-grid-tile>
+        <div class="columnas">
+        <mat-card class="card">
+          <h3>Resumen:</h3>
+          <p><strong>Nombre: </strong>{{contacto.nombre}}</p>
+          <p><strong>Apellidos: </strong>{{contacto.apellidos}}</p>
+          <p><strong>DNI: </strong>{{contacto.dni}}</p>
+          <p><strong>Sexo: </strong>{{contacto.sexo}}</p>
+          <p><strong>Edad: </strong>{{contacto.edad}}</p>
+          <p><strong>Cumpleaños: </strong>{{contacto.cumple}}</p>
+          <p><strong>Notas: </strong>{{contacto.notas}}</p>
+        </mat-card>
+      </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit">          
+        <span *ngIf="do=='insert'; else actualizando_usuario">Añadir</span>
+        <ng-template #actualizando_usuario>Actualizar</ng-template>
+      </button>
+
+    </div>
+  </form>
+
+  <mat-card class="card">
+
+    <h2>Lista de contactos</h2>
+    <table class="mat-table">
+      <tr class="mat-header-row">
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+        <th>DNI</th>
+        <th>Cumpleaños</th>
+        <th>Color Favorito</th>
+        <th>Sexo</th>
+        <th>Notas</th>
+        <th></th>
+      </tr>
+      <tr class="mat-row" *ngFor="let item of contactos; let i = index">
+        <td class="mat-cell">{{ item.nombre }}</td>
+        <td class="mat-cell">{{ item.apellidos }}</td>
+        <td class="mat-cell">{{ item.edad}}</td>
+        <td class="mat-cell">{{ item.dni}}</td>
+        <td class="mat-cell">{{ item.cumple }}</td>
+        <td class="mat-cell">{{ item.colorFavorito}}</td>
+        <td class="mat-cell">{{ item.sexo}}</td>
+        <td class="mat-cell">{{ item.notas}}</td>
+        <td class="mat-cell">
+          <button class="button" mat-flat-button color="primary" (click)=" update( i )"><mat-icon>
+            edit
+            </mat-icon></button> 
+          <button class="button" mat-flat-button color="warn" (click)=" delete( i )"><mat-icon>
+            delete
+            </mat-icon></button>
+        </td>
+      </tr>
+    </table>
+  </mat-card>
+</div>
