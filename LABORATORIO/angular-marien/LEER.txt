@@ -1,0 +1,34 @@
+La estructura del laboratorio es la siguiente:
+    *angular-marien: contiene la parte de Angular.
+        *angular-marien/src/app/personas/personas.component.ts : 
+            contiene las modificaciones realizadas para conectar con mi API
+    *express-marien: contine la API creada en la práctica 7
+
+Instrucciones:
+    1. Dentro de la carpeta express-marien: levantar el servidor (npm start)
+    2. Ejecutar la aplicación de Angular dentro de la carpeta angular-marien(ng serve -o)
+    3. Abrir en el navegador la url
+
+Archivos editados:
+    *express-marien/api/app.js : Añadida librería cors
+    *angular-marien/src/app/personas/personas.component.ts :
+        - Modificaciones para conectar con la API. 
+        - Modificaciones para el datepicker
+
+    *angular-marien/src/app/app.module.ts : Importada librería HttpClientModule
+
+    *angular-marien/src/app/personas/personas.component.html : 
+        - adaptado el formuliario para que cumpla las validaciones de la API de de Color.
+        - adaptadas las llamadas a las funciones de eliminar y actualizar.
+
+    *express-marien/api/controllers/user-controllers.js : adaptadas las variables para
+    integrar con Angular. Si no tenemos acceso a la edición de la API este cambio
+    ha de hacerse en Angular
+
+    *express-marien/api/controllers/user-controllers.js : daptadas las variables para
+    integrar con Angular. Si no tenemos acceso a la edición de la API este cambio
+    ha de hacerse en Angular
+
+    *angular-marien/src/classes/Persona.ts : Añadida id a la clase Persona.
+
+

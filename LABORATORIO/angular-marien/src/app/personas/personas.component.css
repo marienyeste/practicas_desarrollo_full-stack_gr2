@@ -1,0 +1,69 @@
+h1 {
+    letter-spacing: 7px;
+}
+h1 .mat-icon {
+    vertical-align: -3px;
+}
+.form {
+    margin:0 5em;
+}
+.columnas {
+    width:80%;
+}
+.columnas .mat-form-field{
+    display:block;
+}
+.mat-radio-button {
+    padding: 0.5em 0;
+}
+.mat-form-field textarea {
+    height: 256px;
+    background-color: #f9f9f9;
+}
+.mat-radio-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3.5em;
+}
+.p {
+    padding:0 2em;
+}
+.cabecera-lista{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.mat-table {
+    width: 100%;
+}
+.mat-table th {
+    text-align: left;
+}
+.colorpicker {
+    height: 80px;
+    width: 80px;
+}
+.manita{
+    margin: -5em 0 5em 7em;
+}
+.mat-toolbar {
+    justify-content: center;
+    background-color:#673ab7;
+    color:#ffffff;
+}
+.button-row {
+    text-align: center;
+    padding:3em 0;
+}
+.button-row button {
+    padding: 0.7em 3em;
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+.mat-cell button {
+    margin: 0 3px 0 0;
+}
+.columna-der {
+    padding-bottom: 80px;
+}
